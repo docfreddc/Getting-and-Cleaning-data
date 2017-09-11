@@ -40,5 +40,5 @@ cleandata <- function(base_folder, test_folder,train_folder){
   mean_std_data$activity <- all_act[,2]
   ## create tidy data with average values by subject and activity
   ## aggregate columns
-  tidy_data <- aggregate(.~subject+activity, data=mean_std_data, mean, na.rm=TRUE)}
-  
+  tidy_data <- aggregate(.~subject+activity, data=mean_std_data, mean, na.rm=TRUE)
+  write.table(tidy_data,"tidydata.txt",row.names = FALSE)}
